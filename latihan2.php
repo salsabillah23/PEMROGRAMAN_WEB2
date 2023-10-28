@@ -1,34 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <style>
-       .kotak{
-        width:220px;
-        height:50px;
-        display: flex;
-       }
-
-       .clear{
-        border: 2px solid;
-        padding: 10px;
-        margin: 2px;
-       }
-    </style>
-</head>
-<body>
-    <?php
-      $kotak = 5;
-      
-      for ($i=1; $i <=$kotak ; $i++) { 
-        echo "<div class='kotak'>";
-        
-      for ($j=1; $j<=$i ; $j++) { 
-        echo "<div class='clear'>$j</div>";
-      }  
-        
-        echo "</div>";
-      }
-    ?>
+<?php
+function styleText($jawabanIsset, $jawabanEmpty) {
+    $style = "font-size: 28px; font-family: Arial; border: solid; padding: 10px;";
+    $styledText = "<p style='$style'>$jawabanIsset $jawabanEmpty</p>";
    
-</body>
-</html>
+    return $styledText;
+}
+
+// Contoh pemanggilan fungsi:
+$jawabanIsset = "Isset adalah = Digunakan untuk mengecek sebuah inputan baik itu teks field, checkbox, atau radio button.<br> </br>";
+$jawabanEmpty = "Empty adalah = Penanda suatu kondisi. Contohnya adalah dalam pengisian suatu data. ";
+$styledTexts = styleText($jawabanIsset, $jawabanEmpty);
+
+echo $styledTexts; // Output dua teks dengan gaya yang ditentukan
+
+?>

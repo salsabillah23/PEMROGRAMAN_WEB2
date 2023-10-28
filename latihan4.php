@@ -1,33 +1,15 @@
 <?php
-
-echo "Perulangan untuk mencari kategori bilangan : </br>";
-for ($i = 1; $i <= 20; $i++) {
-    echo " • Angka $i adalah ";
-    
-    if ($i % 2 == 0) {
-        echo "genap";
+function factorial($n) {
+    if ($n <= 1) {
+        return 1;
     } else {
-        echo "ganjil";
+        return $n * factorial($n - 1);
     }
-    
-    if (is_prima($i)) {
-        echo " sekaligus bilangan prima";
-    } 
-    
-    echo "<br>";
 }
 
-      function is_prima($n) {
-        if ($n <= 1) {
-          return false;
-        }
+$number = 5; // Ganti dengan bilangan yang ingin Anda hitung faktorialnya
+$result = factorial($number);
+echo "Faktorial dari $number = $result";
 
-        for ($i = 2; $i < $n; $i++) {
-          if ($n % $i == 0) {
-            return false;
-          }
-        }
 
-        return true;
-      }
 ?>
