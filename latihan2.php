@@ -1,16 +1,22 @@
 <?php
-function styleText($jawabanIsset, $jawabanEmpty) {
-    $style = "font-size: 28px; font-family: Arial; border: solid; padding: 10px;";
-    $styledText = "<p style='$style'>$jawabanIsset $jawabanEmpty</p>";
-   
-    return $styledText;
-}
 
-// Contoh pemanggilan fungsi:
-$jawabanIsset = "Isset adalah = Digunakan untuk mengecek sebuah inputan baik itu teks field, checkbox, atau radio button.<br> </br>";
-$jawabanEmpty = "Empty adalah = Penanda suatu kondisi. Contohnya adalah dalam pengisian suatu data. ";
-$styledTexts = styleText($jawabanIsset, $jawabanEmpty);
+$a= "10";
+echo "Aku adalah angka $a </br>";
 
-echo $styledTexts; // Output dua teks dengan gaya yang ditentukan
+//Perkalian
+$hasilKali= $a * 8; //Tanda * adalah operator
+echo "Jika Aku di kali 8,  jumlahku sekarang $hasilKali </br>";
+
+//Pembagian
+$hasilBagi = $hasilKali / 4;
+echo "Jika aku di bagi 4, jumlahku sekarang $hasilBagi </br>";
+
+//Pengurangan
+$hasilKurang = $hasilBagi - 6;
+echo "Jika aku di kurang 6, jumlahku sekarang $hasilKurang </br>";
+
+//Penjumlahan 
+$hasilTambah = $hasilKurang + 2;
+echo "Jika aku di tambah 2, jumlahku sekarang $hasilTambah </br>";
 
 ?>
